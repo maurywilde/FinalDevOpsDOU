@@ -96,6 +96,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
+      run: -lock=false
       run: terraform plan
       working-directory: ./infrastructure/terraform
       env:
