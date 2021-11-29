@@ -1,7 +1,7 @@
 #
 resource "azurerm_container_registry" "example" {
   #var.prefix was created to give originality and individualty to each resource created, it is "ecomProject"
-  name                     = "${var.prefix}AzureContRegist"
+  name                     = "${var.prefix}AzContRegist2"
   resource_group_name      = "${var.resource_group_name}"
   location                 = "${var.location}"
   sku                      = "Standard"
