@@ -77,7 +77,10 @@ jobs:
       #   cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
     
     - name: script
-      run: ./infrastructure/bash/inputvars.sh
+      run: |
+        chmod +x ./infrastructure/bash/inputvars.sh
+        echo “##[debug]Saving credentials...”
+        ./infrastructure/bash/inputvars.sh
       shell: bash
       env:
         client_id: ${{ secrets.CLIENT_ID }}
