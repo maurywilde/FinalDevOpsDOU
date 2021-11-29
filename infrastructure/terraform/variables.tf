@@ -1,20 +1,20 @@
 
 variable "location" {
   description = "The Azure Region in which all resources in this example should be provisioned"
-  default     = "East Us"
+  default     = "EastUS"
   type        = string
 }
 
 
 variable "client_id" {
   description = "Service Principal client id"
-  type        = string
+  # type        = string
   sensitive   = true
 }
 
 variable "client_secret" {
   description = "Service Principal client secret (password)"
-  type        = string
+  # type        = string
   sensitive   = true
 }
 
