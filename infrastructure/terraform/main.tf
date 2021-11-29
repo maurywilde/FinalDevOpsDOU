@@ -4,7 +4,7 @@ data "azurerm_resource_group" "rg" {
   name = "final-project"
 }
 data "azurerm_kubernetes_cluster" "example" {
-  name                = "kubercluster"
+  name                = "fp-kubercluster"
   resource_group_name = data.azurerm_resource_group.rg.name
 }
 
