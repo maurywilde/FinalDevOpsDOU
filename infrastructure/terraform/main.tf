@@ -33,8 +33,8 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "final-project"
     storage_account_name = "fpstorage"
-    container_name       = "projectcontainerdou"
-    key                  = "prod.terraform.projectcontainerdou"
+    container_name       = "fp-container"
+    key                  = "QaSnNNWIGXnpfks+D8BCls2g9KTdGCwcvUyBuoTVhBm5noYGpUlFVfOijp4V0RjjZDUZsHk+KwoOciTHHGtFrQ=="
   }
 }
 
