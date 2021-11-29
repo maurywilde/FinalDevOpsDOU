@@ -1,5 +1,5 @@
-prefix              = "ProjectDOU"
-resource_group_name = "ProjectDOU"
+prefix              = "final-project"
+resource_group_name = "final-project"
 location            = "EastUS"
 node_count          = 1
 vm_size             = "Standard_D2_v2"
