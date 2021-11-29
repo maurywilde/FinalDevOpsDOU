@@ -79,7 +79,7 @@ jobs:
     - name: script
       run: ./infrastructure/bash/inputvars.sh
       shell: bash
-      with:
+      env:
         client_id: ${{ secrets.CLIENT_ID }}
         client_scret: ${{ secrets.CLIENT_SECRET }}
     
