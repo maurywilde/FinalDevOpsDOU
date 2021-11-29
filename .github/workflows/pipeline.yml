@@ -70,11 +70,9 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       ## Credentials for the backend
-      env:
-        ARM_CLIENT_ID: 39ef84f7-cd0f-4d26-a027-02baef579e6b
-        ARM_CLIENT_SECRET: 5b306ae6-7ac8-444b-9a01-75edd8d99308
-        ARM_SUBSCRIPTION_ID: 84ad5de5-966f-4a2b-bce9-d462b5a9bbec
-        ARM_TENANT_ID: c8cd0425-e7b7-4f3d-9215-7e5fa3f439e8
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       # with:
       #   cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
