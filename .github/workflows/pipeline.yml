@@ -96,8 +96,9 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: -lock=false
-      run: terraform plan
+      run: |
+        -lock=false
+        terraform plan
       working-directory: ./infrastructure/terraform
       env:
         ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
