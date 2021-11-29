@@ -1,7 +1,7 @@
 
 #We create our Datas to be able to use kubernetes provider
 data "azurerm_resource_group" "rg" {
-  name = "ProjectDOU"
+  name = "final-project"
 }
 data "azurerm_kubernetes_cluster" "example" {
   name                = "kubercluster"
@@ -31,8 +31,8 @@ provider "kubernetes" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "ProjectDOU"
-    storage_account_name = "projectstoragedou"
+    resource_group_name  = "final-project"
+    storage_account_name = "fpstorage"
     container_name       = "projectcontainerdou"
     key                  = "prod.terraform.projectcontainerdou"
   }
